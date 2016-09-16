@@ -420,10 +420,10 @@ Examples:
     AppKit.NSBundle.mainBundle().infoDictionary()['LSBackgroundOnly'] = '1'
 
     app = AppKit.NSApplication.sharedApplication()
-    
+
     # Handles ATS HTTPS requirement introduced in Mac El Capitan
-+    if options.ignore_ssl_check:
-+        AppKit.NSBundle.mainBundle().infoDictionary()['NSAppTransportSecurity'] = dict(NSAllowsArbitraryLoads = True)
+    if options.ignore_ssl_check:
+        AppKit.NSBundle.mainBundle().infoDictionary()['NSAppTransportSecurity'] = dict(NSAllowsArbitraryLoads = True)
 
     # create an app delegate
     delegate = AppDelegate.alloc().init()
